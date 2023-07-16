@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* border: 1px solid black; */
+}
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: var(--Very-Light-Gray);
+  padding: 50px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0rem auto;
+}
+
+.header {
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+  padding: 0 50px;
+  margin-bottom: 20px;
+}
+
+.span_title {
+  color: var(--Very-Dark-Blue);
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--Grayish-Blue);
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0 40px;
+  margin-bottom: 50px;
+}
+
+.container_cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  align-items: center;
+}
+.cards {
+  min-height: 200px;
+  padding: 30px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.587);
+  background-color: white;
+}
+.img {
+  position: absolute;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  width: 50px;
+}
+
+.card-red {
+  border-top: 3px solid var(--Red);
+  margin-bottom: 20px;
+}
+.card-green {
+  border-top: 3px solid var(--Cyan);
+}
+.card-yellow {
+  border-top: 3px solid var(--Orange);
+}
+.card-blue {
+  border-top: 3px solid var(--Blue);
+}
+
+.title_card {
+  color: var(--Very-Dark-Blue);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.text_card {
+  color: var(--Grayish-Blue);
+  font-size: 0.8rem;
+  font-weight: 200;
+}
+
+@media (max-width: 900px) {
+  body {
+    padding: 0;
+  }
+  main {
+    padding: 30px;
+    min-width: 300px;
+  }
+  .container_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cards {
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+  }
+  .header {
+    text-align: left;
+    padding: 0;
+    max-width: 400px;
+  }
+
+  .subtitle {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .title {
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .central_cards {
+  }
+}
